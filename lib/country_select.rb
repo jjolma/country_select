@@ -53,14 +53,14 @@ module ActionView
         "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa",
         "South Georgia and the South Sandwich Islands", "Spain", "Sri Lanka", "Sudan", "Suriname",
         "Svalbard and Jan Mayen", "Swaziland", "Sweden", "Switzerland", "Syrian Arab Republic",
-        "Taiwan, Province of China", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste",
+        "Taiwan", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste",
         "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan",
         "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom",
         "United States", "United States Minor Outlying Islands", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela",
         "Viet Nam", "Virgin Islands, British", "Virgin Islands, U.S.", "Wallis and Futuna", "Western Sahara",
         "Yemen", "Zambia", "Zimbabwe"] unless const_defined?("COUNTRIES")
     end
-    
+
     class InstanceTag
       def to_country_select_tag(priority_countries, options, html_options)
         html_options = html_options.stringify_keys
@@ -74,7 +74,7 @@ module ActionView
         )
       end
     end
-    
+
     class FormBuilder
       def country_select(method, priority_countries = nil, options = {}, html_options = {})
         @template.country_select(@object_name, method, priority_countries, options.merge(:object => @object), html_options)
